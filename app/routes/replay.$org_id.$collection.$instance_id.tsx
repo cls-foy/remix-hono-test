@@ -17,7 +17,8 @@ export function loader({ request, params }: LoaderFunctionArgs) {
 
   const { org_id, collection, instance_id } = params
 
-  const iframeUrl = `/api/proxy/${org_id}/${collection}/${instance_id}?url=${url}`
+  const iframeUrl = `/api/proxy/${org_id}/${collection}/${instance_id}${url}`
+
   return json({ iframeUrl })
 }
 
